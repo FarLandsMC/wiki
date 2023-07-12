@@ -1,0 +1,196 @@
+span.label.initiate {
+    color: #aaaaaa;
+    content: "Initiate";
+}
+
+span.name.initiate {
+    color: #ffffff;
+}
+
+span.label.bard {
+    color: #ffff55;
+    content: "Bard";
+}
+
+span.name.bard {
+    color: #ffffff;
+}
+
+span.label.esquire {
+    color: #00aa00;
+    content: "Esquire";
+}
+
+span.name.esquire {
+    color: #ffffff;
+}
+
+span.label.knight {
+    color: #ffaa00;
+    content: "Knight";
+}
+
+span.name.knight {
+    color: #ffffff;
+}
+
+span.label.sage {
+    color: #55ffff;
+    content: "Sage";
+}
+
+span.name.sage {
+    color: #ffffff;
+}
+
+span.label.adept {
+    color: #55ff55;
+    content: "Adept";
+}
+
+span.name.adept {
+    color: #ffffff;
+}
+
+span.label.scholar {
+    color: #5555ff;
+    content: "Scholar";
+}
+
+span.name.scholar {
+    color: #ffffff;
+}
+
+span.label.voter {
+    color: #ff6213;
+    content: "Voter";
+}
+
+span.name.voter {
+    color: #ff6213;
+}
+
+span.label.birthday {
+    color: #de3193;
+    content: "B-Day";
+}
+
+span.name.birthday {
+    color: #de3193;
+}
+
+span.label.donor {
+    color: #ff55ff;
+    content: "Donor";
+}
+
+span.name.donor {
+    color: #ff55ff;
+}
+
+span.label.patron {
+    color: #aa00aa;
+    content: "Patron";
+}
+
+span.name.patron {
+    color: #aa00aa;
+}
+
+span.label.sponsor {
+    color: #32a4ea;
+    content: "Sponsor";
+}
+
+span.name.sponsor {
+    color: #32a4ea;
+}
+
+span.label.media {
+    color: #ffff55;
+    content: "Media";
+}
+
+span.name.media {
+    color: #ffff55;
+}
+
+span.label.jr_builder {
+font-weight: bold;
+    color: #bf6bff;
+    content: "Jr. Builder";
+}
+
+span.name.jr_builder {
+    color: #bf6bff;
+}
+
+span.label.jr_mod {
+font-weight: bold;
+    color: #d7493d;
+    content: "Jr. Mod";
+}
+
+span.name.jr_mod {
+    color: #d7493d;
+}
+
+span.label.jr_dev {
+font-weight: bold;
+    color: #0bbd9e;
+    content: "Jr. Dev";
+}
+
+span.name.jr_dev {
+    color: #0bbd9e;
+}
+
+span.label.builder {
+font-weight: bold;
+    color: #9000ff;
+    content: "Builder";
+}
+
+span.name.builder {
+    color: #9000ff;
+}
+
+span.label.mod {
+font-weight: bold;
+    color: #db1100;
+    content: "Mod";
+}
+
+span.name.mod {
+    color: #db1100;
+}
+
+span.label.admin {
+font-weight: bold;
+    color: #00aa00;
+    content: "Admin";
+}
+
+span.name.admin {
+    color: #00aa00;
+}
+
+span.label.dev {
+font-weight: bold;
+    color: #09816b;
+    content: "Dev";
+}
+
+span.name.dev {
+    color: #09816b;
+}
+
+span.label.owner {
+font-weight: bold;
+    color: #ffaa00;
+    content: "Owner";
+}
+
+span.name.owner {
+    color: #ffaa00;
+}

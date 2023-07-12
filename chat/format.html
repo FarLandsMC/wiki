@@ -1,0 +1,344 @@
+<!-- vim: ft=html -->
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Formatting - FarLandsMC Wiki</title>
+
+        <!-- For some reason, this is ignored but the next one isn't -->
+        <meta name="theme-color" content="">
+
+        <!-- Custom HTML head -->
+        <!-- vim: set ft=html -->
+        
+        <!-- Most of this is just to make Discord show a nice embed for the links -->
+        
+        <!-- Reference: https://ogp.me/ -->
+        
+        <meta name="author" content="FarLandsMC">
+        <meta property="og:title" content="Formatting - FarLandsMC Wiki">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://avatars.githubusercontent.com/u/93167637">
+        <meta property="og:description" content="Wiki for all things related to FarLandsMC!">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="FarLandsMC Wiki">
+        <meta name="theme-color" content="#ffaa00">
+
+        <meta name="description" content="Wiki for all things related to FarLandsMC!">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/ranks.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/css/ranks.css">
+        <link rel="stylesheet" href="../theme/pagetoc.css">
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"> <!-- The format from this is taken from the summary formatting --> 
+                    <li class="part-title">IP: farlandsmc.net</li>
+                    <li class="part-title">MC Version: 1.20.1</li>
+                </ol>
+                <ol class="chapter"><li class="spacer"></li><li class="chapter-item expanded "><a href="../welcome/index.html"><strong aria-hidden="true">1.</strong> Welcome</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../welcome/rules.html"><strong aria-hidden="true">1.1.</strong> Rules</a></li><li class="chapter-item expanded "><a href="../welcome/staff.html"><strong aria-hidden="true">1.2.</strong> Staff</a></li><li class="chapter-item expanded "><a href="../welcome/discord.html"><strong aria-hidden="true">1.3.</strong> Discord</a></li><li class="chapter-item expanded "><a href="../welcome/voting.html"><strong aria-hidden="true">1.4.</strong> Voting</a></li><li class="chapter-item expanded "><a href="../welcome/donations.html"><strong aria-hidden="true">1.5.</strong> Donations</a></li><li class="chapter-item expanded "><a href="../welcome/lore.html"><strong aria-hidden="true">1.6.</strong> Server Lore</a></li></ol></li><li class="chapter-item expanded "><a href="../ranks.html"><strong aria-hidden="true">2.</strong> Ranks</a></li><li class="chapter-item expanded "><a href="../features/index.html"><strong aria-hidden="true">3.</strong> Features</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../features/qol.html"><strong aria-hidden="true">3.1.</strong> QoL Features</a></li><li class="chapter-item expanded "><a href="../features/homes.html"><strong aria-hidden="true">3.2.</strong> Homes</a></li><li class="chapter-item expanded "><a href="../features/pocket.html"><strong aria-hidden="true">3.3.</strong> Pocket World</a></li><li class="chapter-item expanded "><a href="../features/packages.html"><strong aria-hidden="true">3.4.</strong> Packages</a></li></ol></li><li class="chapter-item expanded "><a href="../chat/index.html"><strong aria-hidden="true">4.</strong> Chat</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chat/minimessage.html"><strong aria-hidden="true">4.1.</strong> MiniMessage</a></li><li class="chapter-item expanded "><a href="../chat/legacy.html"><strong aria-hidden="true">4.2.</strong> Legacy Codes</a></li><li class="chapter-item expanded "><a href="../chat/format.html" class="active"><strong aria-hidden="true">4.3.</strong> Formatting</a></li><li class="chapter-item expanded "><a href="../chat/stats.html"><strong aria-hidden="true">4.4.</strong> Stats</a></li></ol></li><li class="chapter-item expanded "><a href="../shops/index.html"><strong aria-hidden="true">5.</strong> Shops</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shops/creating.html"><strong aria-hidden="true">5.1.</strong> Creating a Shop</a></li><li class="chapter-item expanded "><a href="../shops/types.html"><strong aria-hidden="true">5.2.</strong> Types</a></li><li class="chapter-item expanded "><a href="../shops/usage.html"><strong aria-hidden="true">5.3.</strong> Using Shops</a></li></ol></li><li class="chapter-item expanded "><a href="../claims/index.html"><strong aria-hidden="true">6.</strong> Claims</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../claims/creating.html"><strong aria-hidden="true">6.1.</strong> Creating a Claim</a></li><li class="chapter-item expanded "><a href="../claims/trust.html"><strong aria-hidden="true">6.2.</strong> Trusting Players</a></li><li class="chapter-item expanded "><a href="../claims/toggles.html"><strong aria-hidden="true">6.3.</strong> Claim Toggles</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">FarLandsMC Wiki</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/FarLandsMC/" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/FarLandsMC/wiki/edit/main/src/chat/format.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main><div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        <h1 id="chat-format"><a class="header" href="#chat-format">Chat Format</a></h1>
+<p>On FarLands, we have many custom chat features.  This includes things
+like nicknames, chat formatting, mentions and much more.</p>
+<p>This page focuses on the following features:</p>
+<ul>
+<li><a href="#chat-emotes">Emotes</a></li>
+<li><a href="#chat-links">Links</a></li>
+<li><a href="#chat-pings">Pings</a></li>
+<li><a href="#chat-commands">Commands</a></li>
+<li><a href="#chat-items">Items</a></li>
+</ul>
+<h2 id="chat-emotes"><a class="header" href="#chat-emotes">Chat Emotes</a></h2>
+<p>Emotes or Emojis can be pasted into chat in two ways: <code>/&lt;emote&gt;</code> or
+<code>:&lt;emote&gt;:</code>.</p>
+<p>With the command, a message can be added before the emote is pasted.
+This is similar to Discord's <code>/shrug</code> command.</p>
+<p>When using the <code>:&lt;emote&gt;:</code> syntax in a message, it will be immediately
+replaced with that message, allowing styling to be applied.</p>
+<blockquote>
+<p><em>Note: If you do not want your emote to be replaced in chat, put a
+backslash (<code>\</code>) before it</em></p>
+<p><em><code>idk \:shrug:</code> -&gt; <code>idk :shrug:</code></em></p>
+</blockquote>
+<p>Some emotes are only supported in chat (<code>:&lt;emote&gt;:</code> format), because the formatting would not
+work well otherwise.</p>
+<p>The following emotes are currently supported, though more may be added
+in the future:</p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Emote</th><th>Chat Only</th></tr></thead><tbody>
+<tr><td>tableflip</td><td><code>(╯°□°）╯︵ ┻━┻</code></td><td>No</td></tr>
+<tr><td>unflip</td><td><code>┬─┬ ノ( ゜-゜ノ)</code></td><td>No</td></tr>
+<tr><td>dab</td><td><code>ㄥ(⸝ ، ⸍ )‾‾‾‾‾</code></td><td>No</td></tr>
+<tr><td>shrug</td><td><code>¯\_(ツ)_/¯</code></td><td>No</td></tr>
+<tr><td>tm</td><td><code>™</code></td><td>Yes</td></tr>
+<tr><td>skull</td><td><code>☠</code></td><td>Yes</td></tr>
+</tbody></table>
+</div>
+<p>Example:</p>
+<ul>
+<li><code>/shrug hello world</code> -&gt; <code>hello world ¯\_(ツ)_/¯</code></li>
+<li><code>/dab</code> -&gt; <code>ㄥ(⸝ ، ⸍ )‾‾‾‾‾</code></li>
+<li><code>Cool:tm:</code> -&gt; <code>Cool™</code></li>
+</ul>
+<h2 id="chat-links"><a class="header" href="#chat-links">Chat Links</a></h2>
+<p>Links in chat will be automatically highlighted aqua and underlined.
+These links can be clicked and opened like any other.</p>
+<blockquote>
+<p><em>Note: If you do not want this behaviour, use a backslash (<code>\</code>) before
+the link.</em></p>
+</blockquote>
+<h2 id="chat-pings"><a class="header" href="#chat-pings">Chat Pings</a></h2>
+<p>You can ping any player who has joined the server before with the
+<code>@&lt;username&gt;</code> syntax. This will play a sound to the player and show
+their full username in chat.  If you hover over the username, it will
+show you stats about the player.</p>
+<blockquote>
+<p><em>Note: If you do not want this behaviour, use a backslash (<code>\</code>) before
+the <code>@</code>.</em></p>
+</blockquote>
+<p>You only need to use at least 3 characters from the player's username,
+i.e. <code>ste</code> -&gt; <code>steve</code>.  If there are multiple players whose names start
+with the same letters, the plugin will chose the player with the most
+playtime.</p>
+<p>Example:</p>
+<pre><code>yo @funn
+</code></pre>
+<p>becomes</p>
+<p><img src="./img-format/ping.png" alt="example of chat ping" /></p>
+<h2 id="commands"><a class="header" href="#commands">Commands</a></h2>
+<p>One can link a command in chat by wrapping it with <code>​`​</code>.
+This will colour the link aqua and make it populate your chat bar when
+clicked.</p>
+<blockquote>
+<p><em>Note: If you do not want this behaviour, use a backslash (<code>\</code>) before
+the first <code>​`​</code>.</em></p>
+</blockquote>
+<p>Example: </p>
+<pre><code>Use `/help` for more info!
+</code></pre>
+<p>becomes</p>
+<p><img src="./img-format/command.png" alt="example of command" /></p>
+<h2 id="items"><a class="header" href="#items">Items</a></h2>
+<p>You can show an item in chat using the <code>[i]</code> or <code>[item]</code> notation.  This
+will show the item that you are currently holding in your hand.</p>
+<blockquote>
+<p><em>Note: If you do not want this behaviour, use a backslash (<code>\</code>) before
+the <code>[</code>.</em></p>
+</blockquote>
+<p>This will show the name of the item as well as the lore/enchantments
+when you hover over the item in chat.</p>
+<p>If the item has not been renamed, it will show in chat using the
+localised version for whoever is looking at it.  If your Minecraft
+language is set to German, it will show you the German name of the item.
+If it's in English, then it shows the English name.</p>
+<p>Example:</p>
+<pre><code>This is my sword: [i]
+</code></pre>
+<p>for English, becomes</p>
+<p><img src="./img-format/item-en.png" alt="english item" /></p>
+<p>and for German, becomes</p>
+<p><img src="./img-format/item-de.png" alt="german item" /></p>
+
+                    </main>
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chat/legacy.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../chat/stats.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chat/legacy.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../chat/stats.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../theme/pagetoc.js"></script>
+
+
+    </div>
+    </body>
+</html>

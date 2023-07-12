@@ -1,0 +1,301 @@
+<!-- vim: ft=html -->
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Trusting Players - FarLandsMC Wiki</title>
+
+        <!-- For some reason, this is ignored but the next one isn't -->
+        <meta name="theme-color" content="">
+
+        <!-- Custom HTML head -->
+        <!-- vim: set ft=html -->
+        
+        <!-- Most of this is just to make Discord show a nice embed for the links -->
+        
+        <!-- Reference: https://ogp.me/ -->
+        
+        <meta name="author" content="FarLandsMC">
+        <meta property="og:title" content="Trusting Players - FarLandsMC Wiki">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://avatars.githubusercontent.com/u/93167637">
+        <meta property="og:description" content="Wiki for all things related to FarLandsMC!">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="FarLandsMC Wiki">
+        <meta name="theme-color" content="#ffaa00">
+
+        <meta name="description" content="Wiki for all things related to FarLandsMC!">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/ranks.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/css/ranks.css">
+        <link rel="stylesheet" href="../theme/pagetoc.css">
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"> <!-- The format from this is taken from the summary formatting --> 
+                    <li class="part-title">IP: farlandsmc.net</li>
+                    <li class="part-title">MC Version: 1.20.1</li>
+                </ol>
+                <ol class="chapter"><li class="spacer"></li><li class="chapter-item expanded "><a href="../welcome/index.html"><strong aria-hidden="true">1.</strong> Welcome</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../welcome/rules.html"><strong aria-hidden="true">1.1.</strong> Rules</a></li><li class="chapter-item expanded "><a href="../welcome/staff.html"><strong aria-hidden="true">1.2.</strong> Staff</a></li><li class="chapter-item expanded "><a href="../welcome/discord.html"><strong aria-hidden="true">1.3.</strong> Discord</a></li><li class="chapter-item expanded "><a href="../welcome/voting.html"><strong aria-hidden="true">1.4.</strong> Voting</a></li><li class="chapter-item expanded "><a href="../welcome/donations.html"><strong aria-hidden="true">1.5.</strong> Donations</a></li><li class="chapter-item expanded "><a href="../welcome/lore.html"><strong aria-hidden="true">1.6.</strong> Server Lore</a></li></ol></li><li class="chapter-item expanded "><a href="../ranks.html"><strong aria-hidden="true">2.</strong> Ranks</a></li><li class="chapter-item expanded "><a href="../features/index.html"><strong aria-hidden="true">3.</strong> Features</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../features/qol.html"><strong aria-hidden="true">3.1.</strong> QoL Features</a></li><li class="chapter-item expanded "><a href="../features/homes.html"><strong aria-hidden="true">3.2.</strong> Homes</a></li><li class="chapter-item expanded "><a href="../features/pocket.html"><strong aria-hidden="true">3.3.</strong> Pocket World</a></li><li class="chapter-item expanded "><a href="../features/packages.html"><strong aria-hidden="true">3.4.</strong> Packages</a></li></ol></li><li class="chapter-item expanded "><a href="../chat/index.html"><strong aria-hidden="true">4.</strong> Chat</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chat/minimessage.html"><strong aria-hidden="true">4.1.</strong> MiniMessage</a></li><li class="chapter-item expanded "><a href="../chat/legacy.html"><strong aria-hidden="true">4.2.</strong> Legacy Codes</a></li><li class="chapter-item expanded "><a href="../chat/format.html"><strong aria-hidden="true">4.3.</strong> Formatting</a></li><li class="chapter-item expanded "><a href="../chat/stats.html"><strong aria-hidden="true">4.4.</strong> Stats</a></li></ol></li><li class="chapter-item expanded "><a href="../shops/index.html"><strong aria-hidden="true">5.</strong> Shops</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shops/creating.html"><strong aria-hidden="true">5.1.</strong> Creating a Shop</a></li><li class="chapter-item expanded "><a href="../shops/types.html"><strong aria-hidden="true">5.2.</strong> Types</a></li><li class="chapter-item expanded "><a href="../shops/usage.html"><strong aria-hidden="true">5.3.</strong> Using Shops</a></li></ol></li><li class="chapter-item expanded "><a href="../claims/index.html"><strong aria-hidden="true">6.</strong> Claims</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../claims/creating.html"><strong aria-hidden="true">6.1.</strong> Creating a Claim</a></li><li class="chapter-item expanded "><a href="../claims/trust.html" class="active"><strong aria-hidden="true">6.2.</strong> Trusting Players</a></li><li class="chapter-item expanded "><a href="../claims/toggles.html"><strong aria-hidden="true">6.3.</strong> Claim Toggles</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">FarLandsMC Wiki</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/FarLandsMC/" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/FarLandsMC/wiki/edit/main/src/claims/trust.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main><div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        <h1 id="trusting-players"><a class="header" href="#trusting-players">Trusting Players</a></h1>
+<p>There are 5 different levels of trust that you can grant a player.</p>
+<ul>
+<li><a href="#access-trust">Access Trust</a></li>
+<li><a href="#container-trust">Container Trust</a></li>
+<li><a href="#build-trust">Build Trust</a></li>
+<li><a href="#management-trust">Management Trust</a></li>
+<li><a href="#co-owner">Co-Owner</a></li>
+</ul>
+<p>Be careful who you trust on your claims, if a player griefs a build or
+steals items from a claim on which they are trusted, staff will not
+punish that player, restore the build, nor return the lost items.  See
+<a href="../welcome/rules.html#rule-4">Rule 4</a> for more information.</p>
+<p>Each level of trust (except for co-owner) can be revoked by using the
+<code>/untrust &lt;username&gt;</code> command.  This will untrust them from all trust
+levels. Co-owner can be revoked using the <code>/removecoowner &lt;username&gt;</code>
+command.</p>
+<h2 id="access-trust"><a class="header" href="#access-trust">Access Trust</a></h2>
+<p>Access trust can be granted by <code>/accesstrust &lt;username&gt;</code> or <code>/at &lt;username&gt;</code>.</p>
+<p>This trust gives the player the ability to interact with things in the
+area.  This includes opening doors, activating pressure plates, animal
+interactions, villager trading, etc.</p>
+<h2 id="container-trust"><a class="header" href="#container-trust">Container Trust</a></h2>
+<p>Container trust can be granted with <code>/containertrust &lt;username&gt;</code> or <code>/ct &lt;username&gt;</code>.</p>
+<p>This trust level includes all permissions from access trust.</p>
+<p>This level grants the player the ability to use containers, such as chests,
+hoppers, barrels, etc.</p>
+<h2 id="build-trust"><a class="header" href="#build-trust">Build Trust</a></h2>
+<p>Build trust can be granted with <code>/trust &lt;username&gt;</code>.</p>
+<p>This trust level includes all permissions from container trust and access
+trust.</p>
+<p>This level grants the player the ability to do anything on the claim,
+except for manage the claim itself.</p>
+<h2 id="management-trust"><a class="header" href="#management-trust">Management Trust</a></h2>
+<p>Management trust can be granted with <code>/managementtrust &lt;username&gt;</code> or
+<code>/mt &lt;username&gt;</code>.</p>
+<p>This trust level includes all permissions from build trust, container
+trust, and access trust.</p>
+<p>This level grants the player the ability to change claim toggles and
+manage the trust list.  The player is <em>not</em> able to delete your claim or
+change its size.</p>
+<h2 id="co-owner"><a class="header" href="#co-owner">Co-Owner</a></h2>
+<p>Co-Owner can be granted with <code>/addcoowner &lt;username&gt;</code> and revoked with
+<code>/removecoowner &lt;username&gt;</code>.</p>
+<p>This player acts exactly the same as the owner.  They can do everything
+in the claim, including resizing and subdividing.  They can not delete
+the claim.</p>
+<p>Be very careful with who you trust at this level.  Players at this level
+can do some very serious damage if they have bad intents.</p>
+<h2 id="trusting-the-public"><a class="header" href="#trusting-the-public">Trusting the Public</a></h2>
+<p>You can trust the public in your claim by using <code>public</code> or <code>*</code> instead of the
+username.  This is not recommended to be done for any level other than
+access trust or maybe container trust depending on the situation.</p>
+<h2 id="trustlist"><a class="header" href="#trustlist">Trustlist</a></h2>
+<p>You can view all players currently trusted in your claim by using the
+<code>/trustlist</code> command.  This will list each trust level and the players
+who are in it.</p>
+
+                    </main>
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../claims/creating.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../claims/toggles.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../claims/creating.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../claims/toggles.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../theme/pagetoc.js"></script>
+
+
+    </div>
+    </body>
+</html>
