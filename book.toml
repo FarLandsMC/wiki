@@ -1,0 +1,23 @@
+[book]
+authors = ["funnyboy_roks"]
+language = "en"
+multilingual = false
+src = "src"
+title = "FarLandsMC Wiki"
+description = "Wiki for all things related to FarLandsMC!"
+
+[build]
+create-missing = false
+
+[preprocessor.pagetoc]
+
+[preprocessor.fl]
+
+[output.html]
+additional-css = ["theme/css/ranks.css", "theme/pagetoc.css"]
+additional-js  = ["theme/pagetoc.js"]
+git-repository-url = "https://github.com/FarLandsMC/"
+edit-url-template = "https://github.com/FarLandsMC/wiki/edit/main/{path}"
+
+[output.html.print]
+enable = false
