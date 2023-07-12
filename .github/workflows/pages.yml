@@ -35,8 +35,8 @@ jobs:
           && mv bin/mdbook-fl ./
           && rm -r bin'
 
-      - name: Restore cached deps
-        uses: actions/cache/restore@v3
+      - name: Save cached deps
+        uses: actions/cache/save@v3
         with:
           path: '~/.cargo-target'
           key: ${{ runner.os }}-cargo-target
@@ -50,5 +50,3 @@ jobs:
         with:
           github_token: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
           publish_dir: book
-        env:
-          GITHUB_TOKEN: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
