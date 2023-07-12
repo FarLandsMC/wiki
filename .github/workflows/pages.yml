@@ -29,19 +29,19 @@ jobs:
       - name: Restore cached deps
         uses: actions/cache/restore@v3
         with:
-          path: '~/.cargo'
-          key: ${{ runner.os }}-cargo
+          path: '~/.cargo-target'
+          key: ${{ runner.os }}-cargo-target
 
       - name: Build preprocessor
-        run: 'cargo install --git https://github.com/FarLandsMC/mdbook-fl.git --root .
+        run: 'cargo install --git https://github.com/FarLandsMC/mdbook-fl.git --root . --target-dir ~/.cargo-target
           && mv bin/mdbook-fl ./
           && rm -r bin'
 
       - name: Restore cached deps
         uses: actions/cache/restore@v3
         with:
-          path: '~/.cargo'
-          key: ${{ runner.os }}-cargo
+          path: '~/.cargo-target'
+          key: ${{ runner.os }}-cargo-target
 
       - name: Build
         run: 'PATH="$PATH:./" mdbook build'
@@ -50,5 +50,5 @@ jobs:
         if: ${{ github.event_name != 'pull_request' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GH_TOKEN }}
+          github_token: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
           publish_dir: book
