@@ -47,11 +47,11 @@ their training, they shall rank up to their full staff equivalent.
 > There are currently no junior staff members.
 
 <!--
-| Rank                      | Members (Time Zone) |
-| ------------------------- | ------------------- |
-| <rank class="jr_dev">     |                     |
-| <rank class="jr_mod">     |                     |
-| <rank class="jr_builder"> |                     |
+| Rank                 | Members (Time Zone) |
+| -------------------- | ------------------- |
+| {{#rank jr_dev    }} |                     |
+| {{#rank jr_mod    }} |                     |
+| {{#rank jr_builder}} |                     |
 -->
 
 # Becoming a Staff Member
