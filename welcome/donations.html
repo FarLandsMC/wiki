@@ -100,7 +100,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"> <!-- The format from this is taken from the summary formatting --> 
+                <ol class="chapter" id="custom-summary-header"> <!-- The format from this is taken from the summary formatting --> 
                     <li class="part-title">IP: farlandsmc.net</li>
                     <li class="part-title">MC Version: 1.20.1</li>
                 </ol>
@@ -150,7 +150,7 @@
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
@@ -196,28 +196,46 @@
 <p>All donations go towards paying for server related bills.</p>
 <p>All donations are final -- no refunds will be issued.</p>
 <p>All donations are cumulative.  This means that if you donate 10 USD now
-for the <rank class="donor"> rank and donate 20 USD later, you'll be
-ranked up to <rank class="patron">.</p>
+for the <span class="label donor">Donor</span> rank and donate 20 USD later, you'll be
+ranked up to <span class="label patron">Patron</span>.</p>
 <p>You can donate <a href="https://farlandsdonations.tebex.io">here</a>.</p>
 <p>View the donor ranks and their perks <a href="../ranks.html#donor-ranks">here</a>.</p>
-<!-- 
-TODO: This would be hella cool
-
-## Donors
-
-<div id="donor-list">
+<h2 id="donors"><a class="header" href="#donors">Donors</a></h2>
+<p>Thank you to all of our wonderful donors!</p>
+<div id="donor-list" style="padding-left: 2rem">
 Loading...
 </div> 
-
 <script>
 const div = document.querySelector('#donor-list');
+
+const rank_name = (rank) => {
+    switch(rank.toUpperCase()) {
+        case 'JR_BUILDER': return 'Jr. Builder'
+        case 'JR_MOD': return 'Jr. Mod'
+        case 'JR_DEV': return 'Jr. Dev'
+        default: return rank[0].toUpperCase() + rank.toLowerCase().substring(1)
+    }
+}
+
+const playermapper = ({ username, uuid, rank }) => {
+    return `<span class="label initiate">Initiate</span> <span class="name initiate">nameasdf</span>`
+        .replaceAll('Initiate', rank_name(rank))
+        .replaceAll('initiate', rank.toLowerCase())
+        .replaceAll('nameasdf', username)
+};
+
 (async () => {
-    const res = await fetch('https://farlandsmc.net/api/donors');
-    const out = await res.json();
-    div.innerHTML = out.join('<br>');
+    try {
+        const res = await fetch('/api/donors');
+        const out = await res.json();
+        div.innerHTML = out.map(playermapper).join('<br><br>');
+    } catch (e) {
+        div.innerHTML = '<span style="color: #d7493d">Unable to fetch donors, try again later.</span>';
+        console.error(e);
+    }
 })();
+
 </script>
--->
 
                     </main>
                     <nav class="nav-wrapper" aria-label="Page navigation">
@@ -268,5 +286,19 @@ const div = document.querySelector('#donor-list');
 
 
     </div>
+
+        <script>
+            const header_div = document.querySelector('#custom-summary-header');
+            const update_status = async () => {
+                const res = await fetch('/api/status');
+                const status = await res.json();
+                header_div.innerHTML = '';
+                header_div.innerHTML += `<li class="part-title">IP: farlandsmc.net${status.port === 25565 ? '' : ':' + status.port}</li>`;
+                header_div.innerHTML += `<li class="part-title">MC Version: ${status.version}</li>`;
+                header_div.innerHTML += `<li class="part-title">Online Players: ${status.players.length}</li>`;
+            };
+            update_status();
+            setInterval(update_status, 60 * 1000); // Update the status every minute
+        </script>
     </body>
 </html>

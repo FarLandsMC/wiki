@@ -100,7 +100,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"> <!-- The format from this is taken from the summary formatting --> 
+                <ol class="chapter" id="custom-summary-header"> <!-- The format from this is taken from the summary formatting --> 
                     <li class="part-title">IP: farlandsmc.net</li>
                     <li class="part-title">MC Version: 1.20.1</li>
                 </ol>
@@ -150,7 +150,7 @@
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
@@ -269,5 +269,19 @@ full list <a href="https://gist.github.com/funnyboy-roks/5d1be107091dd0d623480b2
 
 
     </div>
+
+        <script>
+            const header_div = document.querySelector('#custom-summary-header');
+            const update_status = async () => {
+                const res = await fetch('/api/status');
+                const status = await res.json();
+                header_div.innerHTML = '';
+                header_div.innerHTML += `<li class="part-title">IP: farlandsmc.net${status.port === 25565 ? '' : ':' + status.port}</li>`;
+                header_div.innerHTML += `<li class="part-title">MC Version: ${status.version}</li>`;
+                header_div.innerHTML += `<li class="part-title">Online Players: ${status.players.length}</li>`;
+            };
+            update_status();
+            setInterval(update_status, 60 * 1000); // Update the status every minute
+        </script>
     </body>
 </html>
