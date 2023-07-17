@@ -42,7 +42,7 @@ jobs:
           key: ${{ runner.os }}-cargo-target
 
       - name: Build
-        run: 'PATH="$PATH:./" mdbook build'
+        run: './build.sh'
 
       - name: Deploy to GitHub Pages
         if: ${{ github.event_name != 'pull_request' }}
