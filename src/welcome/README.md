@@ -7,7 +7,7 @@
 Welcome to the FarLandsMC Wiki!  This is the central repository for all
 knowledge related to the FarLands Minecraft server and its plugins!
 
-FarLandsMC is a public Minecraft 1.21.10 server with a welcoming community.
+FarLandsMC is a public Minecraft 26.1.2 server with a welcoming community.
 The IP address is shown in the sidebar, and you are welcome to join!
 
 Use the sidebar on the left to discover the pages, or use the search
